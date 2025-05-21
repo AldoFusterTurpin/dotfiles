@@ -3,4 +3,4 @@
 -- Add any additional options here
 
 -- -- LazyVim auto format
-vim.g.autoformat = false
+vim.g.autoformat = true
