@@ -1,5 +1,21 @@
 // Place your key bindings in this file to override the defaultsauto[]
+// https://dev.to/ansonh/10-more-vs-code-vim-tricks-to-become-a-faster-coder-ndi
+// https://stackoverflow.com/questions/52093417/switch-cursor-from-editor-to-file-explorer-and-vice-versa-in-vs-code
 [
+  {
+    // Special case: when in first editor group (pane), go to sidebar
+    // if visible.
+    "key": "ctrl+h",
+    "command": "workbench.explorer.fileView.focus",
+    "when": "editorTextFocus && vim.active && vim.mode != 'Insert' && activeEditorGroupIndex == 1 && explorerViewletVisible"
+  },
+  {
+    // Special case: when in file explorer, go right (back to 1st open
+    // editor group)
+    "key": "ctrl+l",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "filesExplorerFocus"
+  },
   {
     "key": "cmd+`",
     "command": "workbench.action.quickSwitchWindow"
@@ -8,16 +24,16 @@
     "key": "ctrl+r",
     "command": "-workbench.action.openRecent"
   },
-  {
-    // Instantly return focus back to first editor
-    "key": "ctrl+w",
-    "command": "workbench.action.focusFirstEditorGroup",
-    "when": "sideBarFocus"
-  },
-//   {
-//     "key": "ctrl+w",
-//     "command": "-workbench.action.switchWindow"
-//   },
+  // {
+  //   // Instantly return focus back to first editor
+  //   "key": "ctrl+w",
+  //   "command": "workbench.action.focusFirstEditorGroup",
+  //   "when": "sideBarFocus"
+  // },
+  //   {
+  //     "key": "ctrl+w",
+  //     "command": "-workbench.action.switchWindow"
+  //   },
   {
     "key": "alt+d",
     "command": "editor.action.revealDefinition",
@@ -193,5 +209,34 @@
   {
     "key": "shift+cmd+b",
     "command": "bookmarksExplorer.focus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.switchWindow"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-editor.action.joinLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "f4",
+    "command": "-search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
+  },
+  {
+    "key": "shift+f4",
+    "command": "-search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
   }
 ]

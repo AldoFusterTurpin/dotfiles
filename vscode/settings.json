@@ -1,228 +1,241 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "workbench.iconTheme": "material-icon-theme",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.defaultInterpreterPath": "/usr/local/bin/python3",
+  "redhat.telemetry.enabled": true,
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.suggest.showStatusBar": true,
+  "liveshare.accessibility.soundsEnabled": false,
+  "go.toolsManagement.autoUpdate": true,
+  "editor.codeLensFontFamily": "12",
+  "editor.inlayHints.fontFamily": "12",
+  "search.searchOnType": false,
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "enabled"
+  },
+  "scm.inputFontSize": 12,
+  "search.useIgnoreFiles": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "diffEditor.ignoreTrimWhitespace": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "search.exclude": {
+    "**/pyenv": true,
+    "**/vendor": true
+  },
+  "zenMode.fullScreen": false,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "npm.keybindingsChangedWarningShown": true,
+"workbench.layoutControl.enabled": false,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "workbench.colorCustomizations": {
+    "[Tokyo Night]": {
+      "foreground": "#959cbd",
+      "panelTitle.activeBorder": "#3d59a1",
+      "panelTitle.activeForeground": "#bdc7f0",
+      "panelTitle.inactiveForeground": "#959cbd",
+      "tab.activeForeground": "#bdc7f0",
+      "tab.inactiveForeground": "#959cbd",
+      "breadcrumb.foreground": "#959cbd",
+      "breadcrumb.focusForeground": "#bdc7f0",
+      "breadcrumb.activeSelectionForeground": "#bdc7f0",
+      "statusBar.foreground": "#bdc7f0",
+      "list.focusForeground": "#bdc7f0",
+      "list.hoverForeground": "#bdc7f0",
+      "list.activeSelectionForeground": "#bdc7f0",
+      "list.inactiveSelectionForeground": "#bdc7f0",
+      "list.inactiveSelectionBackground": "#202330",
+      "sideBar.foreground": "#959cbd",
+      "dropdown.foreground": "#959cbd",
+      "menu.foreground": "#bdc7f0",
+      "menubar.selectionForeground": "#bdc7f0",
+      "input.foreground": "#959cbd",
+      "input.placeholderForeground": "#959cbd",
+      "activityBar.foreground": "#bdc7f0",
+      "activityBar.inactiveForeground": "#787c99",
+      "gitDecoration.ignoredResourceForeground": "#696d87"
+    }
+  },
+  "workbench.tree.indent": 10,
+  "editor.mouseWheelZoom": true,
+  "markdown.preview.fontSize": 12,
+  "errorLens.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "editor.cursorSurroundingLines": 10,
+  "workbench.editor.showTabs": "single",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "accessibility.signals.lineHasError": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasFoldedArea": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasBreakpoint": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "off"
+  },
+  "accessibility.signals.onDebugBreak": {
+    "sound": "off"
+  },
+  "accessibility.signals.noInlayHints": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineInserted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineDeleted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineModified": {
+    "sound": "off"
+  },
+  "liveshare.accessibility.outputDevice": "of",
+  "terminal.integrated.shellIntegration.enabled": false,
+  "workbench.colorTheme": "GitHub Light",
+  "explorer.compactFolders": false,
+  "go.testTimeout": "3m",
+
+  //  vim stuff (start)
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["g", "H"],
+      "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<C-h>"], // Focus split window at left
+      "commands": ["workbench.action.focusLeftGroup"]
     },
-    "python.defaultInterpreterPath": "/usr/local/bin/python3",
-    "redhat.telemetry.enabled": true,
-    "editor.accessibilitySupport": "off",
-    "editor.bracketPairColorization.enabled": true,
-    "editor.suggest.showStatusBar": true,
-    "liveshare.accessibility.soundsEnabled": false,
-    "go.toolsManagement.autoUpdate": true,
-    "editor.codeLensFontFamily": "12",
-    "editor.inlayHints.fontFamily": "12",
-    "search.searchOnType": false,
-    "vs-kubernetes": {
-        "vs-kubernetes.crd-code-completion": "enabled"
+    {
+      "before": ["<C-j>"], // Focus split window at right
+      "commands": ["workbench.action.focusBelowGroup"]
     },
-    "scm.inputFontSize": 12,
-    "search.useIgnoreFiles": false,
-    "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml",
-        "diffEditor.ignoreTrimWhitespace": false
+    {
+      "before": ["<C-k>"], // Focus split window at above
+      "commands": ["workbench.action.focusAboveGroup"]
     },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["<C-l>"], // Focus split window at below
+      "commands": ["workbench.action.focusRightGroup"]
     },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
     },
-    "search.exclude": {
-        "**/pyenv": true,
-        "**/vendor": true
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
     },
-    "zenMode.fullScreen": false,
-    "workbench.editor.enablePreviewFromQuickOpen": true,
-    "npm.keybindingsChangedWarningShown": true,
-    "workbench.layoutControl.enabled": false,
-    "[python]": {
-        "editor.formatOnType": true
+    {
+      "before": ["g", "q"],
+      "commands": ["editor.action.quickFix"]
     },
-    "workbench.colorCustomizations": {
-        "[Tokyo Night]": {
-            "foreground": "#959cbd",
-            "panelTitle.activeBorder": "#3d59a1",
-            "panelTitle.activeForeground": "#bdc7f0",
-            "panelTitle.inactiveForeground": "#959cbd",
-            "tab.activeForeground": "#bdc7f0",
-            "tab.inactiveForeground": "#959cbd",
-            "breadcrumb.foreground": "#959cbd",
-            "breadcrumb.focusForeground": "#bdc7f0",
-            "breadcrumb.activeSelectionForeground": "#bdc7f0",
-            "statusBar.foreground": "#bdc7f0",
-            "list.focusForeground": "#bdc7f0",
-            "list.hoverForeground": "#bdc7f0",
-            "list.activeSelectionForeground": "#bdc7f0",
-            "list.inactiveSelectionForeground": "#bdc7f0",
-            "list.inactiveSelectionBackground": "#202330",
-            "sideBar.foreground": "#959cbd",
-            "dropdown.foreground": "#959cbd",
-            "menu.foreground":"#bdc7f0",
-            "menubar.selectionForeground":"#bdc7f0",
-            "input.foreground": "#959cbd",
-            "input.placeholderForeground": "#959cbd",
-            "activityBar.foreground": "#bdc7f0",
-            "activityBar.inactiveForeground": "#787c99",
-            "gitDecoration.ignoredResourceForeground": "#696d87",
-        },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
     },
-    "workbench.tree.indent": 10,
-    "editor.mouseWheelZoom": true,
-    "markdown.preview.fontSize": 12,
-    "errorLens.enabled": false,
-    "editor.renderWhitespace": "none",
-    "editor.renderControlCharacters": false,
-    "editor.cursorSurroundingLines": 10,
-    "workbench.editor.showTabs": "single",
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["g", "t"],
+      "commands": ["editor.action.goToTypeDefinition"]
     },
-    "workbench.activityBar.location": "hidden",
-    "accessibility.signals.lineHasError": {
-        "sound": "off"
+    {
+      "before": ["g", "p", "t"],
+      "commands": ["editor.action.peekTypeDefinition"]
     },
-    "accessibility.signals.lineHasFoldedArea": {
-        "sound": "off"
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
     },
-    "accessibility.signals.lineHasBreakpoint": {
-        "sound": "off"
+    {
+      "before": ["ñ"],
+      "after": [":"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
     },
-    "accessibility.signals.lineHasInlineSuggestion": {
-        "sound": "off"
+    {
+      "before": ["ñ"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-p>": false,
+    "<C-n>": false
+  },
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.leader": "<space>",
+  "vim.incsearch": true,
+  "vim.foldfix": true,
+  //  vim stuff (end)
+  "editor.minimap.enabled": false,
+  "diffEditor.maxComputationTime": 0,
+  "window.commandCenter": false,
+  "search.maxResults": null,
+  "explorer.sortOrder": "type",
+  "editor.multiCursorLimit": 30000,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "files.exclude": {
+    "**/.DS_Store": false,
+    "**/.git": false
+  },
+  "window.zoomLevel": 2.2,
+  "workbench.editor.navigationScope": "editorGroup",
+  "chat.commandCenter.enabled": false,
+  "git.decorations.enabled": false,
+  "docker.extension.enableComposeLanguageServer": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
     },
-    "accessibility.signals.onDebugBreak": {
-        "sound": "off"
-    },
-    "accessibility.signals.noInlayHints": {
-        "sound": "off"
-    },
-    "accessibility.signals.diffLineInserted": {
-        "sound": "off"
-    },
-    "accessibility.signals.diffLineDeleted": {
-        "sound": "off"
-    },
-    "accessibility.signals.diffLineModified": {
-        "sound": "off"
-    },
-    "liveshare.accessibility.outputDevice": "of",
-    "terminal.integrated.shellIntegration.enabled": false,
-    "workbench.colorTheme": "GitHub Light Default",
-    "explorer.compactFolders": false,
-    "go.testTimeout": "3m",
-    "vim.useSystemClipboard": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-          "before": ["g", "H"],
-          "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }]
-        }
-    ],
-    "vim.normalModeKeyBindings": [
-        {
-            "before": [
-                "g",
-                "h"
-            ],
-            "commands": [
-                "editor.action.showDefinitionPreviewHover"
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "i"
-            ],
-            "commands": [
-                "editor.action.goToImplementation"
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "q"
-            ],
-            "commands": [
-                "editor.action.quickFix"
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "r"
-            ],
-            "commands": [
-                "editor.action.referenceSearch.trigger"
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "t"
-            ],
-            "commands": [
-                "editor.action.goToTypeDefinition"
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "p",
-                "t"
-            ],
-            "commands": [
-                "editor.action.peekTypeDefinition"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "e"
-            ],
-            "commands": [
-                "workbench.view.explorer"
-            ]
-        },
-        {
-            "before": [
-                "ñ"
-            ],
-            "after": [
-                ":"
-            ]
-        }
-    ],
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        },
-        {
-            "before": [
-                "ñ"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.handleKeys": {
-        "<C-p>": false,
-        "<C-n>": false,
-    },
-    "vim.autoSwitchInputMethod.enable": true,
-    "vim.leader": "<space>",
-    "vim.incsearch": true,
-    "editor.minimap.enabled": false,
-    "diffEditor.maxComputationTime": 0,
-    "workbench.sideBar.location": "right",
-    "window.commandCenter": false,
-    "search.maxResults": null,
-    "workbench.statusBar.visible": false,
-    "explorer.sortOrder": "type"
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "git.blame.editorDecoration.enabled": false,
+  "workbench.activityBar.location": "hidden",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "yaml.schemas": {
+    "file:///Users/aldofusterturpin/.vscode/extensions/continue.continue-1.2.11-darwin-arm64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  },
+  "chat.mcp.gallery.enabled": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "workbench.statusBar.visible": false
 }
